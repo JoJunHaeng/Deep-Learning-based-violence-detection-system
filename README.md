@@ -1,6 +1,6 @@
-## 항공 영상의 옥외 문화재 객체 탐지 모델
+## 딥러닝 기반의 폭력 행동 감지 시스템
 
-* #### 드론으로 촬영한 항공 영상에서 옥외 문화재 객체 탐지 및 훼손 점검 프로세스를 자동화하기 위한 프로젝트. 데이터 분석을 통하여 모델의 hyper-parameter를 tuinng하여 모델의 성능을 개선함
+* #### CCTV 동영상에서 폭력 행동 및 아동 학대 상황 발생에 대해서 정상/위협/폭력을 정의하고 이를 deep learning을 이용하여 감지하기 위한 기술 개발 프로젝트
 
 ## 프로젝트 담당 업무
 * 관련 연구 조사
@@ -18,6 +18,7 @@
 * AI hub에서 제공하는 폭력 행위가 있는 동영상 965건 수집 및 아동 학대 감지를 위한 별도의 data 30건 수집
 * Data set의 모든 video에 대해서 frame 추출 후 rgb 영상 및 optical flow 영상으로 Data set 구축
 * 1개 video에 대해서 rgb, optical flow로 img clip 구성
+* label은 정상/위협/폭력 상황으로 정의
 
 # 2. Model
 ![image](https://user-images.githubusercontent.com/93234544/206909360-066241e5-c53c-4200-8cbe-14a9dbc01f75.png)
