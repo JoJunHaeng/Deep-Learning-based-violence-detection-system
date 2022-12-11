@@ -7,6 +7,9 @@
 * 데이터 수집
 * 딥러닝 model 개발
 
+* 개발 기간
+2022년 01월 ~ 현재
+
 ## Version
 * python3.9, Tensorflow 2.5
 * C#, WPF
