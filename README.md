@@ -4,11 +4,11 @@
 
 ## 프로젝트 담당 업무
 * 관련 연구 조사
-* 데이터 수집
+* 데이터 수집 및 라벨링 로직 개발
 * 딥러닝 model 개발
 
 ## 개발 기간
-* 2022년 01월 ~ 현재
+* 2022년 01월 ~ 2022년 12월
 
 ## Version
 * python3.9, Tensorflow 2.5
@@ -22,6 +22,13 @@
 * Data set의 모든 video에 대해서 frame 추출 후 rgb 영상 및 optical flow 영상으로 Data set 구축
 * 1개 video에 대해서 rgb, optical flow로 img clip 구성
 * label은 정상/위협/폭력 상황으로 정의
+
+label|폭력 Video|아동 학대 Video
+---|---|---|
+정상|314개|10개|
+위협|340개|10개|
+폭력|311개|10개|
+
 
 # 2. Model
 ![image](https://user-images.githubusercontent.com/93234544/206909360-066241e5-c53c-4200-8cbe-14a9dbc01f75.png)
