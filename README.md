@@ -23,12 +23,12 @@
 * 1개 video에 대해서 rgb, optical flow로 img clip 구성
 * label은 정상/위협/폭력 상황으로 정의
 
-label|폭력 Video|아동 학대 Video
+label|폭력 Video(train set)|아동 학대 Video
 ---|---|---|
-정상|314개|10개|
-위협|340개|10개|
-폭력|311개|10개|
-합계|965개|30개|
+정상|314개(230개)|13개|
+위협|340개(238개)|13개|
+폭력|311개(227개)|13개|
+합계|965개(695개)|39개|
 
 # 2. Model
 ![image](https://user-images.githubusercontent.com/93234544/206909360-066241e5-c53c-4200-8cbe-14a9dbc01f75.png)
