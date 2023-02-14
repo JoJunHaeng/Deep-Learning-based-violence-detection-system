@@ -1,4 +1,8 @@
 ## 딥러닝 기반의 폭력 행동 감지 시스템
+![image](https://user-images.githubusercontent.com/93234544/218736560-18c3c2c1-09ce-4aad-860e-5b38a5e166d4.png)
+-아동학대란 보호자를 포함한 성인이 아동의 건강 또는 복지를 해하거나 정상적인 발달을 할 수 없게 하는 신체적, 정신적, 성적 폭력행위와 가혹행위를 하는 것을 의미함.
+-2020년 경북 문경시, 원아 9명에 대해 음식을 억지로 먹이거나 멍이 들도록 잡아 당기는 등의 가혹행위 발생
+-아동 학대 신고 건수는 2014년에는 총 17,782건이었으나 2018년 36,416건으로 2배 이상 증가하였으며 특히 아동학대 의심 사례의 신고건수가 가장 증가한 것으로 알려지고 있음
 
 * #### CCTV 동영상에서 폭력 행동 및 아동 학대 상황 발생에 대해서 정상/위협/폭력을 정의하고 이를 deep learning을 이용하여 감지하기 위한 기술 개발 프로젝트
 
@@ -8,27 +12,26 @@
 * 딥러닝 model 개발
 
 ## 개발 기간
-* 2021년 06월 ~ 2022년 12월(2021년 12월 퇴직 후 후속 개발을 진행하였음)
+* 2021년 06월 ~ 2022년 12월
 
 ## Version
 * python3.9, Tensorflow 2.5
 * C#, WPF
 
 ## 1. dataset
-![image](https://user-images.githubusercontent.com/93234544/206907597-4dd7f7b9-c60d-48c1-8502-5596563b8419.png)
-![image](https://user-images.githubusercontent.com/93234544/206907613-570347d3-11bd-473a-a437-0d917768c013.png)
+![image](https://user-images.githubusercontent.com/93234544/218737026-640474b3-14ac-427a-87ad-b709500b06b1.png)
 
-* AI hub에서 제공하는 폭력 행위가 있는 동영상 965건 수집 및 아동 학대 감지를 위한 별도의 data 30건 수집
+* AI hub에서 제공하는 폭력 행위가 있는 동영상 965건 수집 및 아동 학대 감지를 위한 별도의 data 39건 수집
 * Data set의 모든 video에 대해서 frame 추출 후 rgb 영상 및 optical flow 영상으로 Data set 구축
-* 1개 video에 대해서 rgb, optical flow로 img clip 구성
-* label은 정상/위협/폭력 상황으로 정의
+* 1개 video에 대해서 rgb, optical flow로 2종류의 데이터로 구성
+* 데이터 셋의 label은 정상/위협/폭력 상황으로 정의
 
-label|폭력 Video(train set)|아동 학대 Video
+label|폭력 Video(train set)|아동 학대 Video(train set)
 ---|---|---|
-정상|314개(230개)|13개|
-위협|340개(238개)|13개|
-폭력|311개(227개)|13개|
-합계|965개(695개)|39개|
+정상|314개(230개)|13개(3개)|
+위협|340개(238개)|13개(3개)|
+폭력|311개(227개)|13개(3개)|
+합계|965개(695개)|39개(10개)|
 
 # 2. Model
 ![image](https://user-images.githubusercontent.com/93234544/206909360-066241e5-c53c-4200-8cbe-14a9dbc01f75.png)
@@ -65,6 +68,9 @@ rgb+optical flow stream(resnet101)|0.778|
 *** 
 
 * #### 폭력 상황 감지 예시
+![image](https://user-images.githubusercontent.com/93234544/206907597-4dd7f7b9-c60d-48c1-8502-5596563b8419.png)
+![image](https://user-images.githubusercontent.com/93234544/206907613-570347d3-11bd-473a-a437-0d917768c013.png)
+
  ![image](https://user-images.githubusercontent.com/93234544/206910423-b1904e03-3cd3-4158-89ed-d09e23ac98ff.png)
 
   
